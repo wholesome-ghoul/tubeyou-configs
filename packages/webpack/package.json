@@ -1,6 +1,6 @@
 {
   "name": "@tubeu/configs-webpack",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Tubeyou webpack configuration",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
@@ -19,7 +19,7 @@
     "release:minor": "standard-version --release-as minor && yarn push-tags",
     "release:patch": "standard-version --release-as patch && yarn push-tags",
     "release:major": "standard-version --release-as major && yarn push-tags",
-    "publish:npm": "yarn build && yarn publish --verbose",
+    "publish:npm": "yarn build && npm publish",
     "deploy": "yarn release && yarn publish:npm",
     "deploy:minor": "yarn release:minor && yarn publish:npm",
     "deploy:patch": "yarn release:patch && yarn publish:npm",
