@@ -1,0 +1,27 @@
+{
+  "name": "@tubeyou/configs-tsconfig",
+  "version": "0.0.1",
+  "description": "Tubeyou typescript configuration",
+  "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "push-tags": "git push --follow-tags",
+    "release": "standard-version && yarn push-tags",
+    "release:minor": "standard-version --release-as minor && yarn push-tags",
+    "release:patch": "standard-version --release-as patch && yarn push-tags",
+    "release:major": "standard-version --release-as major && yarn push-tags",
+    "publish:npm": "yarn build && yarn copy-files && yarn publish",
+    "deploy": "yarn release && yarn publish:npm",
+    "deploy:minor": "yarn release:minor && yarn publish:npm",
+    "deploy:patch": "yarn release:patch && yarn publish:npm",
+    "deploy:major": "yarn release:major && yarn publish:npm"
+  },
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}

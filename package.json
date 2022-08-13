@@ -1,0 +1,20 @@
+{
+  "name": "@tubeyou/configs-workspace",
+  "version": "0.0.0",
+  "description": "Tubeyou configurations",
+  "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
+  "repository": "git@github.com-wholesome:wholesome-ghoul/tubeyou-configs.git",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {},
+  "homepage": "https://github.com/wholesome-ghoul/tubeyou-configs#readme",
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}
