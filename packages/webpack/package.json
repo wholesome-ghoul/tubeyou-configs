@@ -6,6 +6,10 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "push-tags": "git push --follow-tags",
     "release": "standard-version && yarn push-tags",
