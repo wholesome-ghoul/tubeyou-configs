@@ -12,7 +12,6 @@
     "dist/**/*"
   ],
   "scripts": {
-    "oi": "yarn publish",
     "build": "tsc --build --verbose",
     "push-tags": "git push --follow-tags",
     "release": "standard-version && yarn push-tags",
