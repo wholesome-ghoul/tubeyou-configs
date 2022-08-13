@@ -12,17 +12,17 @@
     "dist/**/*"
   ],
   "scripts": {
+    "oi": "yarn publish",
     "build": "tsc --build --verbose",
     "push-tags": "git push --follow-tags",
     "release": "standard-version && yarn push-tags",
     "release:minor": "standard-version --release-as minor && yarn push-tags",
     "release:patch": "standard-version --release-as patch && yarn push-tags",
     "release:major": "standard-version --release-as major && yarn push-tags",
-    "publish:npm": "yarn build && yarn publish --verbose",
-    "deploy": "yarn release && yarn publish:npm",
-    "deploy:minor": "yarn release:minor && yarn publish:npm",
-    "deploy:patch": "yarn release:patch && yarn publish:npm",
-    "deploy:major": "yarn release:major && yarn publish:npm"
+    "deploy": "yarn release && yarn build && yarn publish --verbose",
+    "deploy:minor": "yarn release:minor && yarn build && yarn publish --verbose",
+    "deploy:patch": "yarn release:patch && yarn build && yarn publish --verbose",
+    "deploy:major": "yarn release:major && yarn build && yarn publish --verbose"
   },
   "dependencies": {
     "@types/webpack": "^5.28.0",
