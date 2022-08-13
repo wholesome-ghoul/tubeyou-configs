@@ -1,6 +1,6 @@
 {
   "name": "@tubeu/configs-webpack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Tubeyou webpak configuration",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
