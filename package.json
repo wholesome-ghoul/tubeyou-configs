@@ -8,7 +8,10 @@
   "workspaces": [
     "packages/*"
   ],
-  "scripts": {},
+  "scripts": {
+    "push-tags": "git push --follow-tags",
+    "prepare": "husky install"
+  },
   "homepage": "https://github.com/wholesome-ghoul/tubeyou-configs#readme",
   "devDependencies": {
     "husky": "^8.0.0",
