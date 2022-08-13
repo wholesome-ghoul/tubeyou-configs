@@ -2,8 +2,6 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-### [0.1.12](https://github.com/wholesome-ghoul/tubeyou-configs/compare/v0.1.10...v0.1.12) (2022-08-13)
-
 ### [0.1.10](https://github.com/wholesome-ghoul/tubeyou-configs/compare/v0.1.9...v0.1.10) (2022-08-13)
 
 ### [0.1.9](https://github.com/wholesome-ghoul/tubeyou-configs/compare/v0.1.8...v0.1.9) (2022-08-13)
