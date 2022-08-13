@@ -23,6 +23,9 @@
   },
   "homepage": "https://github.com/wholesome-ghoul/tubeyou-configs#readme",
   "devDependencies": {
+    "standard-version": "^9.5.0",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
     "husky": "^8.0.0",
     "prettier": "^2.7.1"
   },
