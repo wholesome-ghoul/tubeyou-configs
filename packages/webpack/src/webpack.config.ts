@@ -26,7 +26,9 @@ const generateWebpackConfig = (config: WebpackConfig) => {
   const dirToServe = outputDir
 
   const plugins: any = [
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].css",
+    }),
     new webpack.ProvidePlugin({ process: "process/browser" }),
   ]
 
