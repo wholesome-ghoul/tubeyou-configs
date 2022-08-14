@@ -18,13 +18,22 @@ const generateWebpackConfig = (config: WebpackConfig) => {
   const {
     mode = process.env.NODE_ENV! as "development" | "production",
     entry = "./src/index.tsx",
-    template = "./public/index.html",
+    template,
     port = process.env.PORT || 3000,
-    publicUrl = process.env.PUBLIC_URL || "localhost",
+    publicUrl,
     outputDir = process.env.outDir || "dist",
   } = config
 
   const dirToServe = outputDir
+
+  const plugins: any = [
+    new MiniCssExtractPlugin(),
+    new webpack.ProvidePlugin({ process: "process/browser" }),
+  ]
+
+  if (template && publicUrl) {
+    plugins.push(new HtmlWebpackPlugin({ template, publicUrl }))
+  }
 
   const webpackConfig: webpack.Configuration = {
     mode,
@@ -58,11 +67,7 @@ const generateWebpackConfig = (config: WebpackConfig) => {
     resolve: {
       extensions: [".tsx", ".jsx", ".ts", ".js"],
     },
-    plugins: [
-      new HtmlWebpackPlugin({ template, publicUrl }),
-      new MiniCssExtractPlugin(),
-      new webpack.ProvidePlugin({ process: "process/browser" }),
-    ],
+    plugins,
   }
 
   return webpackConfig
