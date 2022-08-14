@@ -1,6 +1,6 @@
 {
   "name": "@tubeu/configs-tsconfig",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Tubeyou typescript configuration",
   "author": "Wholesome Ghoul <wholesome.ghoul@gmail.com>",
   "publishConfig": {
