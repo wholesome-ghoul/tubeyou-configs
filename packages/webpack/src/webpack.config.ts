@@ -1,5 +1,4 @@
 import "dotenv/config"
-import * as path from "path"
 import * as webpack from "webpack"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
@@ -11,7 +10,7 @@ export type WebpackConfig = {
   template?: string
   port?: number
   publicUrl?: string
-  outputDir?: string
+  outputDir: string
 }
 
 const generateWebpackConfig = (config: WebpackConfig) => {
@@ -21,7 +20,7 @@ const generateWebpackConfig = (config: WebpackConfig) => {
     template,
     port = process.env.PORT || 3000,
     publicUrl,
-    outputDir = process.env.outDir || "dist",
+    outputDir,
   } = config
 
   const dirToServe = outputDir
@@ -39,7 +38,7 @@ const generateWebpackConfig = (config: WebpackConfig) => {
     mode,
     entry,
     output: {
-      path: path.resolve(__dirname, outputDir),
+      path: outputDir,
       filename: "bundle.js",
     },
     module: {
@@ -59,7 +58,7 @@ const generateWebpackConfig = (config: WebpackConfig) => {
     },
     devServer: {
       static: {
-        directory: path.join(__dirname, dirToServe),
+        directory: dirToServe,
       },
       open: true,
       port,
