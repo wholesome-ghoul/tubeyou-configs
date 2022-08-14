@@ -41,7 +41,7 @@ const generateWebpackConfig = (config: WebpackConfig) => {
     entry,
     output: {
       path: outputDir,
-      filename: "bundle.js",
+      filename: "js/[name].bundle.js",
     },
     module: {
       rules: [
