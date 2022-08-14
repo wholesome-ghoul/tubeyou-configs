@@ -1,0 +1,7 @@
+{
+  "extends": "./src/tsconfig.build.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}
