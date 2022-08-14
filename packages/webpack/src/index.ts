@@ -1,1 +1,2 @@
-export { default } from "./webpack.config.js"
+export { generateWebpackConfig } from "./webpack.config.js"
+export type { WebpackConfig } from "./webpack.config.js"
