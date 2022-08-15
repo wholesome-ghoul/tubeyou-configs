@@ -2,6 +2,7 @@ import "dotenv/config"
 import * as webpack from "webpack"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import dotenv from "dotenv-webpack"
 import "webpack-dev-server"
 
 export type WebpackConfig = {
@@ -29,6 +30,7 @@ const generateWebpackConfig = (config: WebpackConfig) => {
     new MiniCssExtractPlugin({
       filename: "css/[name].css",
     }),
+    new dotenv(),
     new webpack.ProvidePlugin({ process: "process/browser" }),
   ]
 
